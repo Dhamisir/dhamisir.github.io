@@ -1,0 +1,799 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>FORM IN TABLE</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+<style type="text/css">
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+@import url('https://fonts.googleapis.com/css2?family=David+Libre&family=Josefin+Sans&display=swap');
+
+:root {
+    --bg-size: 100% 100%;
+    --main-color: #fff;
+    --title: 'Josefin Sans', sans-serif;
+    --font-para: 'David Libre', serif;
+    --btn-color: #bbe1fa;
+    --btn-font-color: #000;
+    --btn-font: 1.5rem;
+    --eff: .3s all ease;
+}
+
+* {
+    font-family: var(--font-para);
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+p,
+label,
+input::placeholder {
+    font-size: 1.9rem;
+    line-height: 170%;
+    color: #6c757d;
+}
+
+figure img,
+.fab {
+    transition: var(--eff);
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body {
+    background: hsl(84, 3%, 94%);
+}
+
+.main_header__div {
+    height: calc(100vh - 40vh);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0)), url('https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: var(--bg-size);
+}
+
+.main_heading {
+    font-family: var(--title);
+    font-weight: bold;
+    font-size: 5rem;
+    text-align: center;
+    color: #1b262c;
+}
+
+.main_heading__para {
+    font-size: 2.2rem;
+}
+
+.main_header__div p {
+    font-weight: bold;
+    font-size: 3.5rem;
+    font-family: var(--title);
+    color: var(--main-color);
+    padding-bottom: 0rem;
+}
+
+.main_header__div h2 {
+    font-size: 6.5rem;
+    font-weight: bold;
+    font-family: var(--title);
+    color: var(--main-color);
+    padding-bottom: 2rem;
+    position: relative;
+    transition: var(--eff);
+}
+
+.main_header__div span {
+    font-family: var(--title);
+}
+
+.animateWord div {
+    overflow: hidden;
+    position: relative;
+    float: right;
+    height: 8rem;
+    padding-top: 1rem;
+    margin-top: -1rem;
+}
+
+.animateWord div li {
+    font-weight: 700;
+    padding: 0 1rem;
+    height: 4.5rem;
+    margin-bottom: 4.5rem;
+    display: block;
+    font-family: var(--title);
+}
+
+.flip4 {
+    -webkit-animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+    animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+@-webkit-keyframes flip4 {
+    0% {
+        margin-top: -360px;
+    }
+
+    5% {
+        margin-top: -270px;
+    }
+
+    25% {
+        margin-top: -270px;
+    }
+
+    30% {
+        margin-top: -180px;
+    }
+
+    50% {
+        margin-top: -180px;
+    }
+
+    55% {
+        margin-top: -90px;
+    }
+
+    75% {
+        margin-top: -90px;
+    }
+
+    80% {
+        margin-top: 0px;
+    }
+
+    99.99% {
+        margin-top: 0px;
+    }
+
+    100% {
+        margin-top: -270px;
+    }
+
+}
+
+@keyframes flip4 {
+    0% {
+        margin-top: -360px;
+    }
+
+    5% {
+        margin-top: -270px;
+    }
+
+    25% {
+        margin-top: -270px;
+    }
+
+    30% {
+        margin-top: -180px;
+    }
+
+    50% {
+        margin-top: -180px;
+    }
+
+    55% {
+        margin-top: -90px;
+    }
+
+    75% {
+        margin-top: -90px;
+    }
+
+    80% {
+        margin-top: 0px;
+    }
+
+    99.99% {
+        margin-top: 0px;
+    }
+
+    100% {
+        margin-top: -270px;
+    }
+
+}
+
+.main_header__div button {
+    color: var(--btn-font-color);
+    border-width: 0;
+    font-size: var(--btn-font);
+    transition: var(--eff);
+    padding: .8rem 2rem;
+    background-color: var(--btn-color);
+    border-color: var(--btn-color);
+    font-family: var(--title);
+    outline: none;
+}
+
+.main_header__div button:hover,
+.left_div__like:hover,
+.left_div__reply:hover,
+figure img:hover,
+.subs_btn:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 3rem -1rem rgba(255, 255, 255, 0.8);
+}
+
+/************* left side of the blog style starts*/
+.blog_left__divh1 {
+    font-family: var(--title);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.blog_left__div .blog_title {
+    font-weight: 400;
+    font-size: 2.2rem;
+}
+
+.blog_left__div p span {
+    color: #1b262c;
+}
+
+.left_div_btns {
+    margin-top: 3rem;
+    transition: var(--eff);
+}
+
+.blog_left__div .left_div__like {
+    color: var(--btn-font-color);
+    border-width: .2rem;
+    font-size: var(--btn-font);
+    transition: var(--eff);
+    padding: .8rem 2rem;
+    background-color: var(--btn-color);
+    border-color: var(--btn-color);
+    font-family: var(--title);
+}
+
+.blog_left__div .left_div__reply {
+    color: var(--btn-font-color);
+    border-width: .2rem;
+    font-size: var(--btn-font);
+    transition: var(--eff);
+    padding: .8rem 2rem;
+    background-color: var(--btn-color);
+    border-color: var(--btn-color);
+    font-family: var(--title);
+}
+
+.replies {
+    margin: 2rem 0;
+    padding: 1rem 0;
+    transition: var(--eff);
+    display: none;
+}
+
+.thapa_show {
+    margin: 20px 0;
+    transition: var(--eff);
+    display: block;
+}
+
+/************************************ right side div ************************************/
+
+/*about me div*/
+.about_me_div {
+    width: auto;
+    height: 40rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, transparent 50%, rgba(208, 206, 207, 0.8) 50%), url('../about.jpg');
+    background-size: var(--bg-size);
+}
+
+.about_me_div p:first-child {
+    padding-bottom: 0.2rem;
+    font-size: 2.2rem;
+}
+
+.about_me_div p {
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+    color: #000;
+}
+
+.right_div__title {
+    background: #d0cecf;
+    /*background: #adaea9;*/
+    color: #000;
+}
+
+.right_div__title h2 {
+    font-size: 2.5rem;
+    padding-left: 2rem;
+}
+
+/*popular post*/
+.right_div_post {
+    background: #fff;
+    box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.4);
+}
+
+.right_sub__div {
+    background: #fff;
+}
+
+.right_sub__div .row {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+}
+
+.right_sub__div .row:last-child {
+    margin-bottom: 0;
+}
+
+.row>.right_div_post {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.popular_post__img1 {
+    background-image: url('../img/service/1.jpg');
+    background-size: var(--bg-size);
+}
+
+.popular_post__img2 {
+    background-image: url('../img/service/2.jpg');
+    background-size: var(--bg-size);
+}
+
+.popular_post__img3 {
+    background-image: url('../img/service/3.jpg');
+    background-size: var(--bg-size);
+}
+
+.popular_post__img4 {
+    background-image: url('../img/service/4.jpg');
+    background-size: var(--bg-size);
+}
+
+/*blog tags start*/
+.tags_main {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 18rem));
+    grid-gap: 0.5rem;
+}
+
+.tags_main a {
+    font-size: 1.7rem;
+    line-height: 170%;
+    font-weight: lighter;
+    background: #6c757d;
+    transition: var(--eff);
+}
+
+.tags_main a:hover {
+    color: var(--btn-font-color);
+    background: var(--btn-color);
+}
+
+.right_sub__div {
+    padding: 2.5rem 1rem;
+}
+
+/*advertisemetn style start*/
+.adevetise_img {
+    min-width: 10rem;
+    height: 20rem;
+    display: grid;
+    place-items: center;
+}
+
+/*left side icons start*/
+.fab {
+    color: #000;
+}
+
+.fab:hover {
+    color: #d0cecf;
+    transform: rotate(360deg);
+}
+
+/*right Subscribe  style*/
+.right_sub__div #exampleFormControlInput1 {
+    padding: 1.5rem 1rem;
+    margin: 1.5rem 0;
+}
+
+.subs_btn {
+    color: #000;
+    border-width: 0;
+    font-size: var(--btn-font);
+    transition: var(--eff);
+    padding: .8rem 2rem;
+    display: block;
+    background-color: var(--btn-color);
+    border-color: var(--btn-color);
+    font-family: var(--title);
+    outline: none;
+}
+
+footer p {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/*header responsive code*/
+@media(max-width:998px) {
+    html {
+        font-size: 60%;
+    }
+
+    .left_div__blog {
+        margin: 3rem 0;
+    }
+
+    p,
+    label,
+    input::placeholder {
+        font-size: 2.2rem;
+    }
+
+    :root {
+        --btn-font: 2rem;
+    }
+
+    .main_header__div h2 {
+        font-size: 5rem;
+    }
+
+}
+
+@media(max-width:768px) {
+    html {
+        font-size: 45%;
+    }
+
+    .left_div__blog {
+        margin: 3rem 0;
+    }
+
+}
+    </style>
+</head>
+
+<body>
+    <header class="main_header">
+        <div class="d-flex justify-content-center align-items-center flex-column py-5">
+            <h1 class="text-uppercase main_heading">FORM IN TABLE</h1>
+            <p class="main_heading__para">Welcome to <span class="text-capitalize bg-dark text-white py-2 px-3">
+                    DHAMI SIR</span> Class </p>
+        </div>
+        <!-- //the main image -->
+
+    </header>
+    <!-- header ends -->
+    <!-- two sided blog part starts -->
+    <div class="container-fluid ">
+        <div class="row ">
+            <!-- to get the space form left and right -->
+            <div class="col-xl-10  col-lg-10 col-md-12 col-11 mx-auto my-5">
+                <div class="row gx-5 mx-sm-auto">
+                    <!-- left side of the blog  -->
+                    <div class="col-lg-8 col-md-11 col-11 mx-auto">
+                        <div class="row gy-5 ">
+                            <div class="col-12 card p-4 shadow blog_left__div" id="1">
+                                <div class="d-flex justify-content-center align-items-center flex-column pt-3 pb-5 ">
+                                    <h1 class="text-uppercase">WHAT IS FORM IN TABLE, FORM IN TABLE OVERVIEW</h1>
+                                    <p class="blog_title"> <span class="font-weight-bold"> YOUTUBE VIDEO </span>By Dhami sir </p>
+                                </div>
+                               
+                                             <iframe width="AUTO" height="315" src="https://www.youtube.com/embed/y4efEFLaP0U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                          
+                            
+                                <p><span class="font-weight-bold">Dhami sir</span> Welcomes, all of you to my world of
+                                    STUDY<br>
+                                    
+                                  I'm including some forms inside a HTML table to add new rows and update current rows. The problem that I'm getting is that when I inspect the forms in my dev tools, I see that the form elements are closed immediately after opening (inputs, etc are not included within the form).
+                                
+                                    </p>
+                                <p>
+                                  A form is not allowed to be a child element of a table, tbody or tr. Attempting to put one there will tend to cause the browser to move the form to it appears after the table (while leaving its contents — table rows, table cells, inputs, etc — behind).
+
+                                    You can have an entire table inside a form. You can have a form inside a table cell. You cannot have part of a table inside a form.
+
+                                    Use one form around the entire table. Then either use the clicked submit button to determine which row to process (to be quick) or process every row (allowing bulk updates).
+
+                                </p>
+                            </div>
+                            <!-- 2nd topic  -->
+                            <div class="col-12 card p-4 shadow blog_left__div" id="2">
+                                <div class="d-flex justify-content-center align-items-center flex-column pt-3 pb-5 ">
+                                    <h1 class="text-uppercase">Project by Sir</h1>
+                                    
+                                </div>
+                              
+                                <p><p class="codepen" data-height="500" data-default-tab="html,result" data-slug-hash="oNGoaxZ" data-user="dhamisir" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/dhamisir/pen/oNGoaxZ">
+  first</a> by Dhami sir (<a href="https://codepen.io/dhamisir">@dhamisir</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script></p>
+                               
+
+                            </div>
+                            <!-- 3rd topic -->
+                            <div class="col-12 card p-4 shadow blog_left__div" id="3">
+                                <div class="d-flex justify-content-center align-items-center flex-column pt-3 pb-5 ">
+                                    <h1 class="text-uppercase">Project for Students</h1>
+                                    
+                                </div>
+                                
+                                <p><p class="codepen" data-height="500" data-default-tab="html,result" data-slug-hash="NWawmwX" data-editable="true" data-user="dhamisir" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/dhamisir/pen/NWawmwX">
+  EDIT</a> by Dhami sir (<a href="https://codepen.io/dhamisir">@dhamisir</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script></p>
+                               
+
+                                <div class="replies" id="reply3">
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  *******************************************************
+            **********************************************************.
+            right side of the div
+            *******************************************************
+            **********************************************************
+            -->
+                    <div class="col-lg-3 col-md-7 col-11  justify-content-end m-lg-0 m-auto ">
+                        <div class="row gy-5 left_div__blog">
+                            <!-- about me -->
+                            <div class="col-12  about_me_div shadow">
+                                 <p>Dhami Sir</p>
+                                <p>Just me, myself and I, exploring the universe of coding.I'm trying to explore the new and best techniques for students.</p>
+                            </div>
+                            <!-- popular post -->
+                            <div class=" popular_post ">
+                                <div class="right_div__title py-4 pl-2 ">
+                                    <h2>All content</h2>
+                                </div>
+                                <div class="right_sub__div shadow">
+                                    <div class="row ">
+                                        <div class="col-3  popular_post__img1 py-2 pl-2">
+                                        </div>
+                                        <div class="col-9">
+                                            <h3>Youtube videos</h3>
+                                            <p class="text-capitalize"><a href="#1">Click TO Watch</a> </p>
+                                        </div>
+                                    </div>
+                                    <div class="row ">
+                                        <div class="col-3  popular_post__img2 py-2 pl-2">
+                                        </div>
+                                        <div class="col-9">
+                                            <h3>Project by Sir</h3>
+                                            <p class="text-capitalize"><a href="#2">Click TO See</a> </p>
+                                        </div>
+                                    </div>
+                                    <div class="row ">
+                                        <div class="col-3  popular_post__img3 py-2 pl-2">
+                                        </div>
+                                        <div class="col-9">
+                                            <h3>Practice for You</h3>
+                                            <p class="text-capitalize"><a href="#3">Click TO Do</a> </p>
+                                        </div>
+                                    </div>
+                                    <div class="row ">
+                                        <div class="col-3  popular_post__img4 py-2 pl-2">
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- tags -->
+                              <div class=" right_div_post">
+                                <div class="right_div__title py-4 pl-2 ">
+                                    <h2>Tags</h2>
+                                </div>
+                                <div class="tags_main right_sub__div">
+                                    <a href="https://www.dhamisir.com/" class="badge shadow text-capitalize">Home</a>
+                                    <a href="form attribute.html" class="badge shadow text-capitalize">Form attribute</a>
+                                    <a href="project.html" class="badge shadow text-capitalize">project</a>
+
+                                </div>
+                            </div>
+                            <!-- Inspiration -->
+                            <div class=" right_div_post">
+                                <div class="right_div__title py-4 pl-2 ">
+                                    <h2>Collection</h2>
+                                </div>
+                                <div class="right_sub__div">
+                                    <div class="row gx-3">
+                                        <div class="col-6">
+                                            <figure>
+                                                <img src="https://images.pexels.com/photos/196659/pexels-photo-196659.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+                                                    class="img-fluid shadow">
+                                            </figure>
+                                        </div>
+                                        <div class="col-6">
+                                            <figure>
+                                                <img src="https://images.pexels.com/photos/34140/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                                    class="img-fluid shadow">
+                                            </figure>
+                                        </div>
+                                        <div class="col-6">
+                                            <figure>
+                                                <img src="https://images.pexels.com/photos/38547/office-freelancer-computer-business-38547.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                                    class="img-fluid shadow">
+                                            </figure>
+                                        </div>
+                                        <div class="col-6">
+                                            <figure>
+                                                <img src="https://images.pexels.com/photos/196659/pexels-photo-196659.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+                                                    class="img-fluid shadow">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Follow Me -->
+                            <div class=" right_div_post">
+                                <div class="right_div__title py-4 pl-2 ">
+                                    <h2>Follow Me</h2>
+                                </div>
+                                <div class="right_sub__div d-flex justify-content-around">
+                                    <a href="#"> <i class="fab fa-facebook-square fa-3x"></i></a>
+                                    <a href="https://www.instagram.com/vinodthapa55/" target="_thapa"> <i
+                                            class="fab fa-3x fa-instagram"></i></a>
+                                    <a href="#"> <i class="fab fa-3x fa-github-square"></i> </a>
+                                    <a href="#"> <i class="fab fa-3x fa-twitter-square"></i></a>
+                                    <a href="#"> <i class="fab fa-3x fa-youtube-square"></i> </a>
+                                    <a href="#"> <i class="fab fa-3x fa-linkedin"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="footer" style="background: #111;
+    color: #fff;
+    padding: 2px 0;
+    text-align: center;">
+        <p style="color: #fff;">&copy;
+            Copyright © 2021 .All rights reserved by <a href="#" style="color: #fff;">dhamisir.com</a></p>
+    </footer>
+
+    <!-- end of footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        const like = document.getElementById('like_btn');
+        const singleClick = () => {
+            like.style.fontWeight = 'bold';
+            like.style.background = '#bbe1fa';
+            like.style.color = '#1b262c';
+            like.innerHTML = "✓ Liked";
+        }
+        const doubleClick = () => {
+            like.style.fontWeight = 'normal';
+            like.style.background = '#3282b8';
+            like.style.color = '#fff';
+            like.innerHTML = "Like";
+        }
+        var clickCount = 0;
+        like.addEventListener('click', function () {
+            clickCount++;
+            if (clickCount === 1) {
+                singleClickTimer = setTimeout(function () {
+                    clickCount = 0;
+                    singleClick();
+                }, 400);
+            } else if (clickCount === 2) {
+                clearTimeout(singleClickTimer);
+                clickCount = 0;
+                doubleClick();
+            }
+        }, false);
+        // show and hide the replies
+        const reply = (rep) => {
+            console.log('hi');
+            // debugger;
+            var res = document.getElementById(rep);
+            console.log(res);
+            if (res.className == "replies") {
+                res.className = "thapa_show";
+                res.style.WebkitTransition = 'all 0.3s ease';
+                // res.style.transition = 'all 0.3s ease';
+                // console.log(thapa_show);
+            } else if (res.className == 'thapa_show') {
+                // res.className = " ";
+                console.log('thapa show');
+                res.className = "replies";
+            }
+        }
+    </script>
+<!----Image Slider---->
+<script>
+  var slideIndex = [1,1,1];
+var slideId = ["mySlides1", "mySlides2", "mySlides3"]
+showSlides(1, 0);
+showSlides(1, 1);
+showSlides(1, 2);
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,1286 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon"
+        href="https://blogger.googleusercontent.com/img/a/AVvXsEh1EwS7s5EDGD31YAV85EjnFgpukOhMcSZihHyH7PD0pv5sT_sFj97PZPMOmv-ItQcX4QyOt_SOftoneqd4ti3vOKApd_kJRQf4S8Q-1DY23qKsIeS1GxO3C4GmZ7r8Nmf64ETVl80vIcGhBvanT7PY9iSN4TASzRuy55-RCPU-rtN5NfbHpu01C5ay=s320"
+        type="image/png">
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+  --violet:#feac5e;
+  --pink:#c779d0;
+  --orange :#4bc0c8;
+  --gradient:linear-gradient(90deg, var(--violet), var(--pink), var(--orange));
+}
+
+*{
+  font-family: 'Nunito', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-decoration: none;
+  text-transform: capitalize;
+  scroll-behavior: smooth;
+  transition: all .2s ease-out;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+  width:1rem;
+}
+
+html::-webkit-scrollbar-track{
+  background:#333;
+}
+
+html::-webkit-scrollbar-thumb{
+  background:#fff;
+  border-radius: 5rem;
+}
+
+body{
+  background:var(--gradient);
+  padding:3rem 2%;
+}
+
+.tabcontent, .footer{
+  padding:2rem 4%;
+}
+
+.container{
+  background:#fff;
+  border-radius: .5rem;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+}
+
+.heading{
+  color:transparent;
+  background:var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  padding:0 1rem;
+  padding-top: 2.5rem;
+  text-align: center;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  padding:.8rem 1rem;
+  border-radius: .5rem;
+  background:#333;
+  color:#fff;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+
+.btn:hover{
+  background:var(--gradient);
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding:2rem 7%;
+  border-bottom: .1rem solid rgba(0,0,0,.1);
+  position: relative;
+  z-index: 1000;
+}
+
+header .logo{
+  font-size: 2.5rem;
+  color:var(--violet);
+  font-weight: bold;
+}
+
+header .logo span{
+  color:var(--pink);
+}
+
+header .navbar a{
+  margin-left: 2rem;
+  font-size: 2rem;
+  color:#333;
+  cursor: pointer;
+}
+
+header .navbar a:hover{
+  color:var(--pink);
+}
+header .navbar .active{
+  color:var(--pink);
+}
+
+#menu{
+  font-size: 2.5rem;
+  padding:.5rem 1rem;
+  border-radius: .3rem;
+  border:.1rem solid rgba(0,0,0,.2);
+  cursor: pointer;
+  display: none;
+}
+
+.home{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  align-items: center;
+}
+
+.home .content{
+  flex:1 1 40rem;
+}
+
+.home .image{
+  flex:1 1 40rem;
+}
+
+.home .image img{
+  width:100%;
+}
+
+.home .content h3{
+  color:transparent;
+  background:var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 4rem;
+}
+
+.home .content p{
+  padding:.5rem 0;
+  font-size: 1.7rem;
+  color:#666;
+}
+
+.Practise,.Course{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.Practise .box,.Course .box{
+  flex:1 1 30rem;
+  border-radius: .5rem;
+  border:.1rem solid rgba(0,0,0,.1);
+  padding:1rem;
+  text-align: center;
+  position: relative;
+}
+
+.Practise .box img, .Course .box img{
+  height:20rem;
+  width:100%;
+}
+
+.Practise .box .amount, .Course .box .amount{
+  position: absolute;
+  top:1rem; left:1rem;
+  font-size: 2rem;
+  padding:.5rem 1rem;
+  background:var(--pink);
+  color:#fff;
+  border-radius: .5rem;
+}
+
+.Practise .box .stars i, .Course .box .stars i{
+  color:var(--violet);
+  font-size: 1.5rem;
+  padding:1rem 0;
+}
+
+.Practise .box h3, .Course .box h3{
+  color:var(--pink);
+  font-size: 2.5rem;
+}
+
+.Practise .box p, .Course .box p{
+  color:#666;
+  font-size: 1.5rem;
+  padding:.5rem 0;
+}
+
+.Practise .icons, .Course .icons{
+  display: flex;
+  justify-content: space-between;
+  border-top: .1rem solid rgba(0,0,0,.1);
+  margin-top: 1rem;
+  padding:.5rem;
+  padding-top: 1rem;
+}
+
+.Practise .icons p, .Course .icons p{
+  color:#666;
+  font-size: 1.3rem;
+}
+
+.Practise .icons p i, .Course .icons p i{
+  padding-right: .4rem;
+  color:var(--pink);
+}
+
+.teacher{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.teacher .box{
+  flex:1 1 23rem;
+  border:.1rem solid rgba(0,0,0,.1);
+  border-radius:.5rem;
+  padding:1.5rem;
+  text-align: center;
+}
+
+.teacher .box img{
+  height: 10rem;
+  width:10rem;
+  margin:.5rem 0;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.teacher .box h3{
+  color:var(--violet);
+  font-size: 2.5rem;
+}
+
+.teacher .box span{
+  color:var(--pink);
+  font-size: 2rem;
+}
+
+.teacher .box p{
+  color:#666;
+  font-size: 1.5rem;
+  padding:1rem 0;
+}
+
+.teacher .box .share a{
+  height:4rem;
+  width:4rem;
+  line-height: 4rem;
+  font-size: 2rem;
+  background:var(--pink);
+  border-radius: .5rem;
+  margin:.3rem;
+  color:#fff;
+}
+
+.teacher .box .share a:hover{
+  background:var(--violet);
+}
+
+.price{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.price .box{
+  flex:1 1 30rem;
+  text-align: center;
+  border:.1rem solid rgba(0,0,0,.1);
+  border-radius: .5rem;
+}
+
+.price .box h3{
+  font-size: 2.5rem;
+  color:#333;
+  padding:1.5rem 0;
+}
+
+.price .box .amount{
+  font-size: 4.5rem;
+  color:#fff;
+  padding:1rem 0;
+  background:var(--gradient);
+  font-weight: bold;
+}
+
+.price .box .amount span{
+  font-size: 2rem;
+}
+
+.price .box  ul{
+  border-bottom: .1rem solid rgba(0,0,0,.1);
+  padding: 1rem 0;
+  list-style: none;
+}
+
+.price .box ul li{
+  padding:.7rem 0;
+  font-size: 1.7rem;
+  color:#666;
+}
+
+.price .box .btn{
+  margin:2rem 0;
+}
+
+.Project{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.Project .box{
+  border-radius: .5rem;
+  border:.1rem solid rgba(0,0,0,.1);
+  padding:1rem;
+  flex:1 1 30rem;
+}
+
+.Project .box .student{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Project .box .student .student-info{
+  display: flex;
+  align-items: center;
+}
+
+.Project .box .student i{
+  font-size: 6rem;
+  color:var(--pink);
+  opacity: .5;
+}
+
+.Project .box .student .student-info img{
+  border-radius: 50%;
+  object-fit: cover;
+  height: 7rem;
+  width:7rem;
+  margin-right: 1.5rem;
+}
+
+.Project .box .student .student-info h3{
+  font-size: 2rem;
+  color:#333;
+}
+
+.Project .box .student .student-info span{
+  font-size: 1.5rem;
+  color:var(--pink);
+}
+
+.Project .box .text{
+  padding:1rem 0;
+  font-size: 1.6rem;
+  color:#666;
+}
+
+.contact{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.contact .image{
+  flex:1 1 35rem;
+}
+
+.contact .image img{
+  width:100%;
+}
+
+.contact form{
+  flex:1 1 50rem;
+  border:.1rem solid rgba(0,0,0,.1);
+  border-radius: .5rem;
+  padding:2rem;
+}
+
+.contact form .inputBox{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form .inputBox input,
+.contact form .box, 
+.contact form textarea{
+  width: 100%;
+  padding:1rem;
+  margin:.7rem 0;
+  font-size: 1.7rem;
+  border:.1rem solid rgba(0,0,0,.1);
+  border-radius: .5rem;
+  text-transform: none;
+  color:#333;
+} 
+
+.contact form .inputBox input:focus,
+.contact form .box:focus, 
+.contact form textarea:focus{
+  border-color: var(--pink);
+}
+
+.contact form .inputBox input{
+  width:49%;
+}
+
+.contact form textarea{
+  height: 20rem;
+  resize: none;
+}
+
+.footer .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:6.5rem;
+}
+
+.footer .box-container .box{
+  flex:1 1 20rem;
+}
+
+.footer .box-container .box h3{
+  font-size: 2.5rem;
+  color:var(--violet);
+  padding:.7rem 0;
+}
+
+.footer .box-container .box p{
+  font-size: 1.5rem;
+  color:#666;
+  padding:.7rem 0;
+}
+
+.footer .box-container .box a{
+  display: block;
+  font-size: 1.5rem;
+  color:#666;
+  padding:.7rem 0;
+}
+
+.footer .box-container .box a:hover{
+  color:var(--pink);
+}
+
+.footer .box-container .box p i{
+  padding-right: .5rem;
+  color:var(--pink);
+}
+
+.footer .credit{
+  font-size: 2rem;
+  margin-top: 1rem;
+  padding:1rem;
+  padding-top: 2rem;
+  text-align: center;
+  border-top: .1rem solid rgba(0,0,0,.1);
+  color:#666;
+}
+
+.footer .credit span{
+  color:var(--pink);
+}
+
+
+
+/* media queries  */
+
+@media (max-width:991px){
+
+  html{
+    font-size: 55%;
+  }
+
+  body{
+    padding:1.5rem;
+  }
+
+  header{
+    padding:2rem;
+  }
+
+  .tabcontent, .footer{
+    padding:2rem;
+  }
+
+}
+
+@media (max-width:768px){
+
+  #menu{
+    display: initial;
+  }
+
+  header .navbar{
+    position: absolute;
+    top:100%; left:0; right:0;
+    background:#fff;
+    border-top: .1rem solid rgba(0,0,0,.2);
+    border-bottom: .1rem solid rgba(0,0,0,.2);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header .navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  header .navbar a{
+    font-size: 2.5rem;
+    display: block;
+    margin:2rem 0;
+    text-align:center;
+  }
+
+  .contact form .inputBox input{
+    width:100%;
+  }
+
+}
+
+@media (max-width:400px){
+
+  html{
+    font-size: 50%;
+  }
+
+} 
+</style>
+
+<link rel="me" href="https://www.blogger.com/profile/08728078592012023986" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+<link rel="me" href="https://www.blogger.com/profile/08728078592012023986" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <a href="#" class="logo">Dhami<span>Sir</span></a>
+
+            <div id="menu" class="fas fa-bars"></div>
+
+            <nav class="navbar">
+                <a class="tablink active" onclick="openPage('Home')" href="#Home" id="defaultOpen">Home</a>
+                    <a class="tablink" onclick="openPage('Course')" href="#Course">Course</a>
+                <a class="tablink" onclick="openPage('Practise')" href="#Practise">Practise</a>
+                <!-- <a class="tablink" onclick="openPage('Price')" href="#Price">Class</a> -->
+                <a class="tablink" onclick="openPage('Teacher')" href="#Teacher">Student</a>
+                <a class="tablink" onclick="openPage('Project')" href="#Project">Project</a>
+                <a class="tablink" onclick="openPage('Contact')" href="#Contact">Contact</a>
+            </nav>
+
+        </header>
+
+        <!-- home section  -->
+        <section id="Home" class="tabcontent">
+            <section class="home">
+
+                <div class="content">
+                    <h3>E-learning is a better way of learning</h3>
+                    <p>e-Learning, or electronic learning, is the delivery of learning and training through digital resources. Although eLearning is based on formalized learning, it is provided through electronic devices such as computers, tablets and even cellular phones that are connected to the internet.</p>
+                    <a href="https://forms.gle/hzu13MJyqpJ4tLkV7" target="dhami" class="btn">Fees Remark</a>
+                    <a href="https://drive.google.com/file/d/1IvSoSBYcjyWGAKSNqcSZbwbRLH1Yh0QZ/view?usp=sharing" target="dhami" class="btn">Download Sublime</a>
+                  <a href="https://tailblocks.cc/" target="dhami" class="btn">Tailblocks</a><br>
+                 <!-- The text field --><br>
+                 <input type="text" value="<link href='https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css' rel='stylesheet'>" size="75" style="width:100%; border:2px solid; font-size:2rem;     text-transform: lowercase;" readonly id="myInput">
+        <button onclick="myFunction()" style="    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 0.5rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.7rem;">Copy Code</button>
+        <!-- <input type="text" value="<link href='https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css' rel='stylesheet'>" size="75" style="width:100%; border:2px solid; font-size:2rem;     text-transform: lowercase;" readonly> -->
+
+
+                </div>
+
+                <div class="image">
+                    <img src="https://1.bp.blogspot.com/IxTUWQbYxfcvuhDRkhIFXaakIx4com99FU5aP548C6WYjrj9sdj1FK3ZmOTK18y5aZsxJQLp52dP8BM=s320" alt="">
+                </div>
+
+            </section>
+        </section>
+      
+       <!-- course section  -->
+        <section id="Course" class="tabcontent">
+            <section class="Course">
+
+                <div class="box">
+                    <span class="amount">Html Topic</span>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0ghZhvvXNDgKC2Gqh3npLdNuXyBvGyqxkxg&usqp=CAU" alt="">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <h3>Hyper Text Markup Language</h3>
+
+                    <a href="html/html overview.html" class="btn" target="dhami">Html Overview</a>
+                    <a href="html/heading tag.html" class="btn" target="dhami">Heading Tags</a>
+                    <a href="html/formating tag.html" class="btn" target="dhami">Formating Tags</a>
+                    <a href="html/attribute.html" class="btn" target="dhami">Attribute</a>
+                    <a href="html/marquee.html" class="btn" target="dhami">Marquee Tag</a>
+                    <a href="html/list.html" class="btn" target="dhami">List Tag</a>
+                    <a href="html/nested list.html" class="btn" target="dhami">Nested List</a>
+                    <a href="html/table.html" class="btn" target="dhami">Table Tag</a>
+                    <a href="html/rows cols.html" class="btn" target="dhami">Rowspan And Colspan</a>
+                    <a href="html/form.html" class="btn" target="dhami">Form Tag</a>
+                    <a href="html/form attribute.html" class="btn" target="dhami">Form Attribute</a>
+                    <a href="html/form table.html" class="btn" target="dhami">Form Table</a>
+                    <a href="html/project.html" class="btn" target="dhami">PROJECT</a>
+                </div>
+
+                <div class="box">
+                    <span class="amount">CSS</span>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCb5mDznuvf8bkjFmzxzSzOoiC3FIVJP67Ng&usqp=CAU" alt="">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <h3>CASCADING STYLE SHEET</h3>
+                    <a href="CSS/overview.html" class="btn" target="dhami">CSS OVERVIEW</a>
+                    <a href="css/property.html" class="btn" target="dhami">PROPERTY</a>
+                    <a href="CSS/borders.html" class="btn" target="dhami">BORDERS</a>
+                    <a href="css/div.html" class="btn" target="dhami">DIV/SPAN</a>
+                    <a href="CSS/padding.html" class="btn" target="dhami">PADDING PROPERTY</a>
+                    <a href="CSS/margn.html" class="btn" target="dhami">MARGIN PROPERTY</a>
+
+                    <a href="CSS/inlineblock.html" class="btn" target="dhami">DISPLAY (Inline-Block) </a>
+                    <a href="CSS/displayflex.html" class="btn" target="dhami">FLEX / FLEXBOX</a>
+                    <a href="CSS/position.html" class="btn" target="dhami">POSITIONS</a>
+                    <a href="CSS/pseudo.html" class="btn" target="dhami">CLASSES & COMBINATION</a>
+                    <a href="CSS/responsive.html" class="btn" target="dhami">RESPONSIVE hed design</a>
+                    <a href="CSS/transitionanimination.html" class="btn" target="dhami">TRANSITION & ANIMINATIONS</a>
+                    <a href="CSS/shadowgradients.html" class="btn" target="dhami">SHADOWS & GRADIENTS</a>
+                    <a href="CSS/function.html" class="btn" target="dhami">FUNCTIONS</a>
+                    <a href="CSS/selectors.html" class="btn" target="dhami">CSS SELECTERS</a>
+                    <a href="CSS/waysinsert.html" class="btn" target="dhami">WAYS TO INSERT CSS</a>
+                    <a href="CSS/color.html" class="btn" target="dhami">COLOR OF LINKS</a>
+                    
+                    
+                    
+                    
+                </div>
+
+                <div class="box">
+                    <span class="amount">JS</span>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQMkEfS8V17kcUy2Zt7ogmThINwd7GM0KAjA&usqp=CAU" alt="">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <h3>JAVA SCRIPT</h3>
+                    <a href="js/overview.html" target="dhami" class="btn">JAVA SCRIPT OVERVIEW</a>
+                    <a href="js/operators.html" target="dhami" class="btn">OPERATORS</a>
+                    <a href="js/method.html" target="dhami" class="btn">METHODS OF COMMUNICATION</a>
+                    <a href="js/conversation.html" target="dhami" class="btn">CONVERSATION FUNCTION</a>
+                    <a href="js/ifelse.html" target="dhami" class="btn">IF-ELSE</a>
+                    <a href="js/nestedif.html" target="dhami" class="btn">Else-IF</a>
+                    <a href="js/loops.html" target="dhami" class="btn">LOOPS</a>
+                    <a href="js/fort.html" target="dhami" class="btn">FOR TABLE / FACTORIAL</a>
+                    <a href="js/pattern.html" target="dhami" class="btn">PATTERNS</a>
+                    <a href="js/patternadvance.html" target="dhami" class="btn">ADVANCE PATTERN</a>
+                    <a href="js/switch.html" target="dhami" class="btn">SWITCH</a>
+                    <a href="js/function1.html" target="dhami" class="btn">FUNCTION_1</a>
+                    <a href="js/function2.html" target="dhami" class="btn">FUNCTION_2</a>
+                    <a href="js/function3.html" target="dhami" class="btn">FUNCTION_3</a>
+                    <a href="js/eval.html" target="dhami" class="btn">EVAL</a>
+                    <a href="js/array.html" target="dhami" class="btn">JAVA SCRIPT ARRAY</a>
+                    <a href="js/string.html" target="dhami" class="btn">STRING</a>
+              
+                </div>
+
+                <div class="box">
+                    <span class="amount">PHP</span>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMFmz5cOYa63I6lz5AmhEWMj5JKnV2OaxWCA&usqp=CAU" alt="">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <h3>HYPERTEXT PROCESSOR</h3>
+                    <a href="php/overview.html" target="dhami" class="btn">PHP OVERVIEW</a>
+                     <a href="php/operators.html" target="dhami" class="btn">PHP OPERATORS</a>
+                      <a href="php/loop.html" target="dhami" class="btn">PHP LOOPS</a>
+                       <a href="php/fun.html" target="dhami" class="btn">PHP FUNCTIONS</a>
+                </div>
+
+                <div class="box">
+                    <span class="amount">MY SQL</span>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrpAsfZEuq4fEZUhJAgAP950yFZrfDMAL0yA&usqp=CAU" alt="">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <h3></h3>
+                  
+                    <a href="mysql/data.html" target="dhami" class="btn">MYSQL DATABASE</a>
+                    <a href="mysql/crtb.html" target="dhami" class="btn">MYSQL CREATE TABLE</a>
+                    <a href="mysql/cnct.html" target="dhami" class="btn">MYSQL CONNECT</a>
+                    <a href="mysql/insrt.html" target="dhami" class="btn">MYSQL INSERT</a>
+                    <a href="mysql/updt.html" target="dhami" class="btn">MYSQL UPDATE</a>
+                    <a href="mysql/dlt.html" target="dhami" class="btn">MYSQL DELETE</a>
+                    <a href="mysql/select.html" class="btn">MYSQL SELECT</a>
+                    
+                    
+                </div>
+
+                <div class="box">
+                    <span class="amount">ASP.Net</span>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiiUhG1nvgptcllYX0TowtXXeUlnmOXcMtLQ&usqp=CAU" alt="">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <h3>ACTIVE SERVER PAGES</h3>
+                    
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHLNDLTHQcONdx5PprFUbiRFigI_vZP28-w9S0Qr1f8PnYnw/viewform?vc=0&c=0&w=1&flr=0" target="dhami" class="btn">Start Test</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHLNDLTHQcONdx5PprFUbiRFigI_vZP28-w9S0Qr1f8PnYnw/viewform?vc=0&c=0&w=1&flr=0" target="dhami" class="btn">Start Test</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHLNDLTHQcONdx5PprFUbiRFigI_vZP28-w9S0Qr1f8PnYnw/viewform?vc=0&c=0&w=1&flr=0" target="dhami" class="btn">Start Test</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHLNDLTHQcONdx5PprFUbiRFigI_vZP28-w9S0Qr1f8PnYnw/viewform?vc=0&c=0&w=1&flr=0" target="dhami" class="btn">Start Test</a>
+
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHLNDLTHQcONdx5PprFUbiRFigI_vZP28-w9S0Qr1f8PnYnw/viewform?vc=0&c=0&w=1&flr=0" target="dhami" class="btn">Start Test</a>
+
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHLNDLTHQcONdx5PprFUbiRFigI_vZP28-w9S0Qr1f8PnYnw/viewform?vc=0&c=0&w=1&flr=0" target="dhami" class="btn">Start Test</a>
+
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHLNDLTHQcONdx5PprFUbiRFigI_vZP28-w9S0Qr1f8PnYnw/viewform?vc=0&c=0&w=1&flr=0" target="dhami" class="btn">Start Test</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHLNDLTHQcONdx5PprFUbiRFigI_vZP28-w9S0Qr1f8PnYnw/viewform?vc=0&c=0&w=1&flr=0" target="dhami" class="btn">Start Test</a>
+
+                   
+                </div>
+
+            </section>
+        </section>
+
+        <!-- Practise section  -->
+        <section id="Practise" class="tabcontent">
+            <section class="Practise">
+
+                <div class="box">
+                    <span class="amount">Word Home Tab</span>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQQ_MPn3n02634J8DnWvVFvU12uipaObJtgg&usqp=CAU" alt="">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <h3>Basic Sample Paper 1</h3>
+                    <p>Most of those frequently used commands are located in the Home Tab.
+                       When you open Microsoft Word 2007 you will notice that instead of toolbars and drop down menus, you will see what is called a Ribbon.  The Ribbon is located close to the top of the Word window.  </p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfA-Oxe-GDdsfSVlu5VO1KNgC1t20phisN7wzdQbM8TxW3_RQ/viewform?vc=0&c=0&w=1&flr=0" class="btn" target="dhami">START TEST</a>
+                    <!-- <div class="icons">
+                        <p> <i class="far fa-clock"></i> 2 hours </p>
+                        <p> <i class="far fa-calendar"></i> 6 months </p>
+                        <p> <i class="fas fa-book"></i> 12 modules </p>
+                    </div> -->
+                </div>
+
+                <div class="box">
+                    <span class="amount">Word Insert Tab</span>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6cxV89kcL46WOD62PMASwE-29x-SpBWzsTQ&usqp=CAU" alt="">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <h3>Basic Sample paper 2</h3>
+                    <p>The Insert tab contains various items that you may want to insert into a document. These items include such things as tables, word art, hyperlinks, symbols, charts, signature line, date & time, shapes, header, footer, text boxes, links, boxes, equations and so on.</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4wFur3QdTm5KS4ui3Xe82ZGSfLQ4i04Y9dlxcOnFrTS7TCQ/viewform" class="btn" target="dhami">Start Test</a>
+                   <!--  <div class="icons">
+                        <p> <i class="far fa-clock"></i> 2 hours </p>
+                        <p> <i class="far fa-calendar"></i> 6 months </p>
+                        <p> <i class="fas fa-book"></i> 12 modules </p>
+                    </div> -->
+                </div>
+
+                <div class="box">
+                    <span class="amount">Word Mailing Tab</span>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAdovZOXatFp5GK1pWGXIG6Soa46GMPB7zlQ&usqp=CAU" alt="">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <h3>Sample paper 3</h3>
+                    <p>The Mailings tab provides features related to mail merge, such as envelopes, labels, merge fields and so on as icons.</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScVAdJKFmu5n5tMRZptel2nQmwdW4it8Tt85uRUR7vm4PzLNA/viewform?vc=0&c=0&w=1&flr=0" target="dhami" class="btn">Start Test</a>
+                    <!-- <div class="icons">
+                        <p> <i class="far fa-clock"></i> 2 hours </p>
+                        <p> <i class="far fa-calendar"></i> 6 months </p>
+                        <p> <i class="fas fa-book"></i> 12 modules </p>
+                    </div> -->
+                </div>
+
+                <div class="box">
+                    <span class="amount">Wrod View Tab</span>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKDfMlUWXPNeyQ7VWunfmJzit6b9AC_rfrfw&usqp=CAU" alt="">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <h3>Sample paper 4</h3>
+                    <p>The View tab enables you to switch between Normal or Master Page, and Single Page or Two-Page Spread views. This tab also gives you control over showing boundaries, guides, rulers, and other layout tools, zooming the size of your view of the publication, and managing Publisher windows you have open.</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScr0BJtj_Bhg_TEY42ie0mj6gp8Eac9QwdnBl8PrOZtRdIrNg/viewform?vc=0&c=0&w=1&flr=0" target="dhami" class="btn">Start Test</a>
+                   <!--  <div class="icons">
+                        <p> <i class="far fa-clock"></i> 2 hours </p>
+                        <p> <i class="far fa-calendar"></i> 6 months </p>
+                        <p> <i class="fas fa-book"></i> 12 modules </p>
+                    </div> -->
+                </div>
+
+                <div class="box">
+                    <span class="amount">Excel</span>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjyYa1QTPwIp_xiI-AxszhZSwIJg2dEfk9PA&usqp=CAU" alt="">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <h3>Excel</h3>
+                    <p>Microsoft Excel is a helpful and powerful program for data analysis and documentation. It is a spreadsheet program, which contains a number of columns and rows, where each intersection of a column and a row is a “cell.” Each cell contains one point of data or one piece of information.</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdtjbbV5L2kjAR9XS8VwIE6uWqvPq9mlRlbh_jVRcY__AI15w/viewform?vc=0&c=0&w=1&flr=0" target="dhami" class="btn">Start Test</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfVrQFB7-wYsGcG6TPRlbh9s4egCvf5NnxYjKG6_dfK0GGigw/viewform?vc=0&c=0&w=1&flr=0" target="dhami" class="btn">Start Test</a>
+                   <!--  <div class="icons">
+                        <p> <i class="far fa-clock"></i> 2 hours </p>
+                        <p> <i class="far fa-calendar"></i> 6 months </p>
+                        <p> <i class="fas fa-book"></i> 12 modules </p>
+                    </div> -->
+                </div>
+
+                <div class="box">
+                    <span class="amount">Topology</span>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXsqnMV1LIudP8k1Ml4-iJ4EquzMrfSolo7A&usqp=CAU" alt="">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <h3>Star,Ring,Bus & Tree</h3>
+                    <p>Bus topology. As the simplest design, a bus topology requires nodes to be in a linear order. ...
+                Ring topology. Another simple design is the ring topology. ...
+                  Star topology. ...
+                    Mesh topology. ...
+                Tree topology.</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHLNDLTHQcONdx5PprFUbiRFigI_vZP28-w9S0Qr1f8PnYnw/viewform?vc=0&c=0&w=1&flr=0" target="dhami" class="btn">Start Test</a>
+                   <!--  <div class="icons">
+                        <p> <i class="far fa-clock"></i> 2 hours </p>
+                        <p> <i class="far fa-calendar"></i> 6 months </p>
+                        <p> <i class="fas fa-book"></i> 12 modules </p>
+                    </div> -->
+                </div>
+
+            </section>
+        </section>
+
+        <!-- teacher section  -->
+        <Section id="Teacher" class="tabcontent">
+            <section class="teacher">
+
+                <div class="box">
+                    <img src="images/teacher-1.png" alt="">
+                    <h3>Barkha Rana</h3>
+                    <span>student</span>
+                    <p>She's very intelligent student.</p>
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="images/teacher-2.png" alt="">
+                    <h3>john deo</h3>
+                    <span>student</span>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, nobis.</p>
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="images/teacher-3.png" alt="">
+                    <h3>john deo</h3>
+                    <span>student</span>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, nobis.</p>
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="images/teacher-4.png" alt="">
+                    <h3>john deo</h3>
+                    <span>student</span>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, nobis.</p>
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
+                </div>
+
+            </section>
+        </Section>
+
+        <!-- price section  -->
+        <section id="Price" class="tabcontent">
+            <section class="price">
+
+                <div class="box">
+                    <h3>Basic Batch</h3>
+                    <div class="amount"><span></span>8:00-9:30<span></span></div>
+                    <ul>
+                        <li>certificates</li>
+                        <li>full Practise</li>
+                        <li>full modules</li>
+                        <li>live projects</li>
+                        <li>24 x 7 supports</li>
+                    </ul>
+                    <a href="https://classroom.google.com/c/NDQxMjg0MjUyMjQx?cjc=o53673q" class="btn">Join Class Room</a>
+                </div>
+
+                <div class="box">
+                    <h3>Php Batch</h3>
+                    <div class="amount"><span></span>11:30-1:00<span></span></div>
+                    <ul>
+                        <li>certificates</li>
+                        <li>full Practise</li>
+                        <li>full modules</li>
+                        <li>live projects</li>
+                        <li>24 x 7 supports</li>
+                    </ul>
+                    <a href="https://classroom.google.com/c/NDQxNjM3MDA5ODU5?cjc=mlrjvfu" class="btn">Join Class Room</a>
+                </div>
+                      <div class="box">
+                    <h3>Basic Batch</h3>
+                    <div class="amount"><span></span>2:00-3:00<span></span></div>
+                    <ul>
+                        <li>certificates</li>
+                        <li>full Practise</li>
+                        <li>full modules</li>
+                        <li>live projects</li>
+                        <li>24 x 7 supports</li>
+                    </ul>
+                    <a href="https://classroom.google.com/c/NDQxMjg5MzI1NTM3?cjc=3e3k7ge" class="btn">Join Class Room</a>
+                </div>
+                    <div class="box">
+                    <h3>Html Batch</h3>
+                    <div class="amount"><span></span>5:00-6:30<span></span></div>
+                    <ul>
+                        <li>certificates</li>
+                        <li>full Practise</li>
+                        <li>full modules</li>
+                        <li>live projects</li>
+                        <li>24 x 7 supports</li>
+                    </ul>
+                    <a href="https://classroom.google.com/c/NDQxMjg4MzkxNTc0?cjc=oinyr43" class="btn">Join Class Room</a>
+                </div>
+         <div class="box">
+                    <h3>Html Batch</h3>
+                    <div class="amount"><span></span>3:00-4:30<span></span></div>
+                    <ul>
+                        <li>certificates</li>
+                        <li>full Practise</li>
+                        <li>full modules</li>
+                        <li>live projects</li>
+                        <li>24 x 7 supports</li>
+                    </ul>
+                    <a href="https://classroom.google.com/c/NDMxNzM1MDczNDU1?cjc=kqe6ac7" class="btn">Join Class Room</a>
+                </div>
+
+            </section>
+        </section>
+
+
+        <!-- project section  -->
+        <section id="Project" class="tabcontent">
+            <section class="Project">
+
+                <div class="box">
+                    <div class="student">
+                        <div class="student-info">
+                            <img src="images/student-1.png" alt="">
+                            <div class="info">
+                                <h3>john deo</h3>
+                                <span>student</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A molestiae ipsa mollitia.
+                        Dolore sapiente animi ab eligendi voluptatum ipsa omnis.</p>
+                </div>
+
+                <div class="box">
+                    <div class="student">
+                        <div class="student-info">
+                            <img src="images/student-2.png" alt="">
+                            <div class="info">
+                                <h3>john deo</h3>
+                                <span>student</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A molestiae ipsa mollitia.
+                        Dolore sapiente animi ab eligendi voluptatum ipsa omnis.</p>
+                </div>
+
+                <div class="box">
+                    <div class="student">
+                        <div class="student-info">
+                            <img src="images/student-3.png" alt="">
+                            <div class="info">
+                                <h3>john deo</h3>
+                                <span>student</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A molestiae ipsa mollitia.
+                        Dolore sapiente animi ab eligendi voluptatum ipsa omnis.</p>
+                </div>
+
+                <div class="box">
+                    <div class="student">
+                        <div class="student-info">
+                            <img src="images/student-4.png" alt="">
+                            <div class="info">
+                                <h3>john deo</h3>
+                                <span>student</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A molestiae ipsa mollitia.
+                        Dolore sapiente animi ab eligendi voluptatum ipsa omnis.</p>
+                </div>
+
+                <div class="box">
+                    <div class="student">
+                        <div class="student-info">
+                            <img src="images/student-5.png" alt="">
+                            <div class="info">
+                                <h3>john deo</h3>
+                                <span>student</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A molestiae ipsa mollitia.
+                        Dolore sapiente animi ab eligendi voluptatum ipsa omnis.</p>
+                </div>
+
+                <div class="box">
+                    <div class="student">
+                        <div class="student-info">
+                            <img src="images/student-6.png" alt="">
+                            <div class="info">
+                                <h3>john deo</h3>
+                                <span>student</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A molestiae ipsa mollitia.
+                        Dolore sapiente animi ab eligendi voluptatum ipsa omnis.</p>
+                </div>
+
+            </section>
+        </section>
+
+        <!-- contact section  -->
+        <section id="Contact" class="tabcontent">
+            <section class="contact">
+
+                <div class="image">
+                    <img src="https://dhamisir.netlify.app/images/contact-img.svg" alt="">
+                </div>
+
+                <form action="">
+
+                    <div class="inputBox">
+                        <input type="text" placeholder="name">
+                        <input type="email" placeholder="email">
+                    </div>
+
+                    <input type="text" placeholder="subject" class="box">
+
+                    <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
+
+                    <input type="submit" class="btn" value="send">
+
+                </form>
+
+            </section>
+        </section>
+
+        <!-- footer section  -->
+
+        <section class="footer">
+
+            <div class="box-container">
+                     
+                <div class="box">
+                    <h3>about us</h3>
+                    <p> It is founded in 2021 by:<br>
+                     Dhami Sir Team<br>
+                        Address:  45, RK Puram colony, Ambala, Haryana 134003</p>
+                </div>
+                    
+                <div class="box">
+                    <h3>Information</h3>
+                    <!-- <a href="#">24/7 contact</a> -->
+                    <a href="#">Certificate</a>
+                    <a href="#">Privacy policy</a>
+                    <a href="#">Terms Of Services</a>
+                </div>
+
+                <div class="box">
+                    <h3>follow us</h3>
+                    <a href="#">Whatsapp</a>
+                    <a href="#">facebook</a>
+                    <a href="#">Telegram</a>
+                    <a href="#">instagram</a>
+                    <a href="#">Youtube</a>
+                </div>
+
+                <div class="box">
+                    <h3>contact us</h3>
+                    <p> <i class="fas fa-phone"></i> +9198125***** </p>
+                    <p> <i class="fas fa-envelope"></i> dhamisir1516@gmail.com </p>
+                    <p> <i class="fas fa-map-marker-alt"></i> haryana, ambala - 134003 </p>
+                </div>
+
+            </div>
+
+            <div class="credit"> © 2021<span> Dhami sir </span> | all rights reserved </div>
+
+        </section>
+
+    </div>
+
+
+    <!---jquery cdn---->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
+<script>
+    $(document).on('click', '.navbar a', function(){
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+    $(document).on('click', '.box a', function(){
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+</script>
+    <!---Tab Script---->
+<script>
+function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+  
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+    <script>
+        function openPage(pageName, elmnt) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++)             
+            document.getElementById(pageName).style.display = "block";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+<script type="text/javascript">
+    let menu = document.querySelector('#menu');
+let navbar = document.querySelector('.navbar');
+
+menu.onclick = () =>{
+  menu.classList.toggle('fa-times');
+  navbar.classList.toggle('active');
+}
+
+window.onscroll = () =>{
+  menu.classList.remove('fa-times');
+  navbar.classList.remove('active');
+}
+
+</script>
+  <script>/*<![CDATA[*/ var uri = window.location.toString(); if (uri.indexOf("%3D","%3D") > 0) { var clean_uri = uri.substring(0, uri.indexOf("%3D")); window.history.replaceState({}, document.title, clean_uri);} var uri = window.location.toString(); if (uri.indexOf("%3D%3D","%3D%3D") > 0) { var clean_uri = uri.substring(0, uri.indexOf("%3D%3D")); window.history.replaceState({}, document.title, clean_uri);} var uri = window.location.toString(); if (uri.indexOf("&m=1","&m=1") > 0) { var clean_uri = uri.substring(0, uri.indexOf("&m=1")); window.history.replaceState({}, document.title, clean_uri); } var uri = window.location.toString(); if (uri.indexOf("?m=1","?m=1") > 0) { var clean_uri = uri.substring(0, uri.indexOf("?m=1"));window.history.replaceState({}, document.title, clean_uri);}; var protocol=window.location.protocol.replace(/\:/g,''); if(protocol=='http'){ var url=window.location.href.replace('http','https'); window.location.replace(url);} /*]]>*/</script>
+</body>
+
+</html>
